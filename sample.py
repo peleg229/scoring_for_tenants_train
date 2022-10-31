@@ -126,9 +126,6 @@ def features():
     df_final['credit_score'] = (df_final['credit_score'] - df_final['credit_score'].min())/500
     df_final['age'] = df_final['age']/85
     df_final = df_final.astype({'eviction': 'int'})
-    train, test = train_test_split(df_final[['is_employed', 'self_employed', 'credit_score', 'eviction', 'pets', 'criminal', 'age', 'score', 'is_good']], test_size=0.25)
-    train.to_csv("train_tenant_score_fnl.csv")
-    test.to_csv("test_tenant_score_fnl.csv")
     return df_final[['credit_score', 'eviction', 'criminal', 'age', 'is_good']]
 
 
@@ -201,8 +198,7 @@ def model_elastic():
     print('precision_good_tenants: ' + str(p))
     print('recall_good_tenants: : ' + str(r))
     calc_clustering_measures(y_pred, y_test)
-    score = model.score(x_test, y_test)
-    pickle.dump(model, open(os.path.join("tenant_score_ml_model"), 'wb'))
+    #pickle.dump(model, open(os.path.join("../pythonProject10/tenant_score_ml_model"), 'wb'))
     return score, y_pred
 
 
