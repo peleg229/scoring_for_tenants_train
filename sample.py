@@ -1,4 +1,3 @@
-import os
 
 import db_connections as db
 import numpy as np
@@ -9,7 +8,7 @@ from sklearn.linear_model import ElasticNet
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import fbeta_score, make_scorer
 import json
-import pickle
+
 
 def cal_tenant(df):
     if len(df) < 2:
