@@ -32,9 +32,8 @@ def score(x_f):
     return {'level': level, 'score': fans}
 
 
-
-
-x = """{"credit_score": 678,
+x = """{applicant_id: 'BC5T2A09-ELE2-4HG0-AE74-4E2DF78A3E1D',
+        "credit_score": 678,
         "eviction": 2,
         "criminal": 1,
         "age": 28}
