@@ -10,7 +10,7 @@ import os
 
 
 
-HOST = '172.31.71.220'
+HOST = '172.31.66.17'
 PORT = 5432
 REGION = "us-east-1"
 DBNAME = 'HOME365_REP'
